@@ -49,16 +49,20 @@ function updatePortfolio(profileData) {
     }).join('')
 }
 
-function updateProfessionalExperience(profileData) {
-    const professionalExperience = document.getElementById('profile.professionalExperience')
-    professionalExperience.innerHTML = profileData.professionalExperience.map(experience => {
-        return `
+function updateFormations(profileData) {
+    const professionalFormation = document.getElementById('profile.formations')
+    professionalFormation.innerHTML = profileData.formations.logoFormation.map(formationLogo => `<li><img src="${formationLogo}"></li>`).join('')
+}
+
+function updateFormationsDescriptions(profileData){
+    const professionalFormationDescription = document.getElementById('profile.description')
+    professionalFormationDescription.innerHTML = profileData.formations.description.map(description => {
+        return`
             <li>
-                <h3 class="title">${experience.name}</h3>
-                <p class="period">${experience.period}</p>
-                <p>${experience.description}</p>
+                <h3 class="title">${description.name}</h3>
+                <h3 class="workload" id="profile.workload">${description.workload}</h3>
             </li>
-        `
+        `    
     }).join('')
 }
 
@@ -69,5 +73,6 @@ function updateProfessionalExperience(profileData) {
     updateHardSkills(profileData)
     updateLanguages(profileData)
     updatePortfolio(profileData)
-    updateProfessionalExperience(profileData)
+    updateFormations(profileData)
+    updateFormationsDescriptions(profileData)
 })()
