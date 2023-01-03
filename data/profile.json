@@ -58,8 +58,14 @@
   ],
   "formations": {
     "logoFormation":[
-      "https://raw.githubusercontent.com/miguelItalo/js-developer-portfolio/main/data/imgs/formations/formação-html.png",
-      "https://raw.githubusercontent.com/miguelItalo/js-developer-portfolio/main/data/imgs/formations/formação-js.png"
+      {
+      "name":"HTML5",
+      "logo":"https://raw.githubusercontent.com/miguelItalo/js-developer-portfolio/main/data/imgs/formations/formação-html.png"
+      },
+      {
+      "name": "Javascript",
+      "logo": "https://raw.githubusercontent.com/miguelItalo/js-developer-portfolio/main/data/imgs/formations/formação-js.png"  
+      }
     ],
     "description":[
       {

@@ -51,7 +51,7 @@ function updatePortfolio(profileData) {
 
 function updateFormations(profileData) {
     const professionalFormation = document.getElementById('profile.formations')
-    professionalFormation.innerHTML = profileData.formations.logoFormation.map(formationLogo => `<li><img src="${formationLogo}"></li>`).join('')
+    professionalFormation.innerHTML = profileData.formations.logoFormation.map(formationLogo => `<li><img src="${formationLogo.logo}" alt="${formationLogo.name}" title="${formationLogo.name}"></li>`).join('')
 }
 
 function updateFormationsDescriptions(profileData){
